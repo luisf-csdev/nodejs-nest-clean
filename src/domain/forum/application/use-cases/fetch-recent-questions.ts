@@ -1,5 +1,5 @@
 import { Injectable } from '@nestjs/common'
-import { right, type Either } from '@/core/either'
+import { right, Either } from '@/core/either'
 import { Question } from '../../enterprise/entities/question'
 import { QuestionsRepository } from '../repositories/questions-repository'
 

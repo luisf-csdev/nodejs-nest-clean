@@ -2,7 +2,7 @@ import { Injectable } from '@nestjs/common'
 import { JwtService } from '@nestjs/jwt'
 import { Encrypter } from '@/domain/forum/application/cryptography/encrypter'
 
-Injectable()
+@Injectable()
 export class JwtEncrypter implements Encrypter {
   constructor(private jwtService: JwtService) {}
 

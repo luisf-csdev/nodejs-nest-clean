@@ -1,5 +1,5 @@
 import { Injectable } from '@nestjs/common'
-import { left, right, type Either } from '@/core/either'
+import { left, right, Either } from '@/core/either'
 import { HasherGenerator } from '../cryptography/hash-generator'
 import { StudentsRepository } from '../repositories/students-repository'
 import { StudentAlreadyExistsError } from './errors/student-already-exists-error'

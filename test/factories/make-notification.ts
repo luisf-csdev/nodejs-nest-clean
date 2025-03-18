@@ -2,7 +2,7 @@ import { faker } from '@faker-js/faker'
 import { UniqueEntityID } from '@/core/entities/unique-entity-id'
 import {
   Notification,
-  type NotificationProps,
+  NotificationProps,
 } from '@/domain/notification/enterprise/entities/notification'
 
 export function makeNotification(

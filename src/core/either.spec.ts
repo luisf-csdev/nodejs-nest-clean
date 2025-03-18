@@ -1,4 +1,4 @@
-import { left, right, type Either } from './either'
+import { left, right, Either } from './either'
 
 const doSomething = (shouldSuccess: boolean): Either<string, number> => {
   if (shouldSuccess) {

@@ -1,5 +1,5 @@
 import { Injectable } from '@nestjs/common'
-import { right, type Either } from '@/core/either'
+import { right, Either } from '@/core/either'
 import { UniqueEntityID } from '@/core/entities/unique-entity-id'
 import { Question } from '../../enterprise/entities/question'
 import { QuestionAttachment } from '../../enterprise/entities/question-attachment'

@@ -12,8 +12,8 @@ import { AnswerCommentsRepository } from '@/domain/forum/application/repositorie
 import { OnAnswerCommentCreated } from './on-answer-comment-created'
 import {
   SendNotificationUseCase,
-  type SendNotificationUseCaseRequest,
-  type SendNotificationUseCaseResponse,
+  SendNotificationUseCaseRequest,
+  SendNotificationUseCaseResponse,
 } from '../use-cases/send-notification'
 
 let sendNotificationExecuteSpy: MockInstance<

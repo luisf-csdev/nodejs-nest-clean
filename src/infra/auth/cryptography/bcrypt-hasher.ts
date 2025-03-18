@@ -3,7 +3,7 @@ import bcryptjs from 'bcryptjs'
 import { HasherComparer } from '@/domain/forum/application/cryptography/hash-comparer'
 import { HasherGenerator } from '@/domain/forum/application/cryptography/hash-generator'
 
-Injectable()
+@Injectable()
 export class BcryptHasher implements HasherGenerator, HasherComparer {
   private HASH_SALT_LENGTH = 8
 

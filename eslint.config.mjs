@@ -30,6 +30,12 @@ export default ts.config(
       },
     },
     rules: {
+      '@typescript-eslint/consistent-type-imports': [
+        'error',
+        {
+          prefer: 'no-type-imports',
+        },
+      ],
       'unicorn/filename-case': ['error', { case: 'kebabCase' }],
       'prettier/prettier': [
         'error',

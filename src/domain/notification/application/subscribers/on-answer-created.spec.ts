@@ -9,8 +9,8 @@ import { MockInstance } from 'vitest'
 import { OnAnswerCreated } from './on-answer-created'
 import {
   SendNotificationUseCase,
-  type SendNotificationUseCaseRequest,
-  type SendNotificationUseCaseResponse,
+  SendNotificationUseCaseRequest,
+  SendNotificationUseCaseResponse,
 } from '../use-cases/send-notification'
 
 let sendNotificationExecuteSpy: MockInstance<

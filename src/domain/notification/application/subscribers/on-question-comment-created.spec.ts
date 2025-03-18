@@ -9,8 +9,8 @@ import { QuestionCommentsRepository } from '@/domain/forum/application/repositor
 import { OnQuestionCommentCreated } from './on-question-comment-created'
 import {
   SendNotificationUseCase,
-  type SendNotificationUseCaseRequest,
-  type SendNotificationUseCaseResponse,
+  SendNotificationUseCaseRequest,
+  SendNotificationUseCaseResponse,
 } from '../use-cases/send-notification'
 
 let sendNotificationExecuteSpy: MockInstance<

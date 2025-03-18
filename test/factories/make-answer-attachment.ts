@@ -2,7 +2,7 @@ import { UniqueEntityID } from '@/core/entities/unique-entity-id'
 import {} from '@/domain/forum/enterprise/entities/answer-comment'
 import {
   AnswerAttachment,
-  type AnswerAttachmentProps,
+  AnswerAttachmentProps,
 } from '@/domain/forum/enterprise/entities/answer-attachment'
 
 export function makeAnswerAttachment(
