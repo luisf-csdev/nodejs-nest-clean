@@ -1,9 +1,11 @@
 import { makeQuestion } from 'test/factories/make-question'
 import { makeQuestionComment } from 'test/factories/make-question-comment'
+import { InMemoryAttachmentsRepository } from 'test/repositories/in-memory-attachments-repository'
 import { InMemoryNotificationsRepository } from 'test/repositories/in-memory-notifications-repository'
 import { InMemoryQuestionAttachmentsRepository } from 'test/repositories/in-memory-question-attachments-repository'
 import { InMemoryQuestionCommentsRepository } from 'test/repositories/in-memory-question-comments-repository'
 import { InMemoryQuestionsRepository } from 'test/repositories/in-memory-questions-repository'
+import { InMemoryStudentsRepository } from 'test/repositories/in-memory-students-repository'
 import { MockInstance } from 'vitest'
 import { QuestionCommentsRepository } from '@/domain/forum/application/repositories/question-comments-repository'
 import { OnQuestionCommentCreated } from './on-question-comment-created'
@@ -24,17 +26,25 @@ describe('On Question Comment Created', () => {
   let questionsRepository: InMemoryQuestionsRepository
 
   let questionCommentsRepository: QuestionCommentsRepository
+  let attachmentsRepository: InMemoryAttachmentsRepository
+  let studentsRepository: InMemoryStudentsRepository
 
   let notificationsRepository: InMemoryNotificationsRepository
   let sendNotificationUseCase: SendNotificationUseCase
 
   beforeEach(() => {
     questionAttachmentsRepository = new InMemoryQuestionAttachmentsRepository()
+    attachmentsRepository = new InMemoryAttachmentsRepository()
+    studentsRepository = new InMemoryStudentsRepository()
     questionsRepository = new InMemoryQuestionsRepository(
       questionAttachmentsRepository,
+      attachmentsRepository,
+      studentsRepository,
     )
 
-    questionCommentsRepository = new InMemoryQuestionCommentsRepository()
+    questionCommentsRepository = new InMemoryQuestionCommentsRepository(
+      studentsRepository,
+    )
 
     notificationsRepository = new InMemoryNotificationsRepository()
     sendNotificationUseCase = new SendNotificationUseCase(

@@ -3,8 +3,6 @@ import { StudentsRepository } from '@/domain/forum/application/repositories/stud
 import { Student } from '@/domain/forum/enterprise/entities/student'
 
 export class InMemoryStudentsRepository implements StudentsRepository {
-  constructor() {}
-
   public items: Student[] = []
 
   async findByEmail(email: string) {
